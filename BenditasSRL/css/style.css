@@ -89,7 +89,26 @@ nav {
 #galeria h2,#top-rated h2{
     margin: 30px 0px;
 }
+.contenedor-grid {
+    display: grid;   
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
+}
 
+.movie-item{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 450ms;
+    transform-origin: center left;
+}
 .card {
     border-radius: 20px;
     overflow: hidden;
@@ -137,14 +156,12 @@ nav {
 }
 
 
-.reseña-scroller{
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding:0px 0px 40px 0px;
+.reseña-grid{
+    display: grid;   
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
 }
 
 .reseña-item{
@@ -154,7 +171,7 @@ nav {
     font-size: 20px;
     cursor: pointer;
     margin-left: 30px;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: space-between;
     transition: all 450ms;
@@ -178,7 +195,7 @@ nav {
 
 .reseña-item-detail {
     align-items: flex-start;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -199,22 +216,18 @@ nav {
     margin: 3px 0px;
 }
 
- /* Footer*/
- #footer {
+.footer {
     align-items: center;
-    background-color: #fff;
-    display: flex;
-    height: 100px;
-    width: 100%;
-    gap: 20px;
+    background-color: #3b4549;
+    color: rgb(177, 174, 170);
+    position: sticky;
 }
 
-#footer a{
+.footer a{
     text-decoration: none;
-    color: #858282;
+    color: rgb(160, 157, 154);
 
 }
-
 
  /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -229,16 +242,7 @@ nav {
         font-size: 3vw;
     }
 
-    .logo-text{
-        display: none;
-    }
-    .login-text{
-        display: none;
-    }
    
 
-    #footer{
-        flex-direction: column;
-        justify-content: center;
-    }
+    
 }
